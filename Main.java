@@ -23,7 +23,6 @@ public class Main
     {
       System.out.println("Try again.");
     }
-    sc.close();
 
 
     System.out.println("Problem 2");
@@ -41,14 +40,39 @@ public class Main
     }
     else
     {
-      System.out.print("Try again.");
+      System.out.println("Try again.");
     }
 
 
     System.out.println("Problem 3");
-
-
+    System.out.println("Enter an integer in the fifties: ");
+    int f = sc.nextInt();
+    if (f >= 50 && f <= 59)
+    {
+      System.out.println("Your number is " + f);
+    }
+    else
+    {
+      f = 55;
+      System.out.println("That's not in the fifties!");
+      System.out.println("Your number is " + f);
+    }
     
+
+    System.out.println("Problem 4");
+    System.out.println("Enter an integer that is not less than or equal to 2: ");
+    int x = sc.nextInt();
+    System.out.println("Enter an integer that is not greater than 9, optional if the last one fulfilled the prerequisites (AND make sure the product of this integer and the last is greater than 10): ");
+    int y = sc.nextInt();
+    if (x > 2 || (y < 9 && (x*y)>10))
+    {
+      System.out.println("pass");
+    }
+    else
+    {
+      System.out.println("Try again!");
+    }
+    sc.close();
   }
   public static boolean rectEqual(Rectangle r1, Rectangle r2)
   {
